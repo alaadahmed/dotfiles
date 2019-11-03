@@ -3,13 +3,22 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ak/font-size 16)
+ '(ak/font-size 15)
  '(ansi-color-names-vector
    ["#d2ceda" "#f2241f" "#67b11d" "#b1951d" "#3a81c3" "#a31db1" "#21b8c7" "#655370"])
- '(custom-enabled-themes (quote (spacemacs-dark)))
+ '(company-frontends
+   (quote
+    (company-pseudo-tooltip-frontend company-echo-metadata-frontend)))
+ '(company-idle-delay 0.2)
+ '(company-minimum-prefix-length 1)
+ '(company-require-match nil)
+ '(company-tooltip-align-annotation t t)
+ '(custom-enabled-themes (quote (spacemacs-light)))
  '(custom-safe-themes
    (quote
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
+ '(diff-hl-flydiff-delay 0.5 t)
+ '(flycheck-indication-mode (quote right-fringe))
  '(hl-todo-keyword-faces
    (quote
     (("TODO" . "#dc752f")
@@ -28,6 +37,7 @@
      ("XXX+" . "#dc752f")
      ("\\?\\?\\?+" . "#dc752f"))))
  '(pdf-view-midnight-colors (quote ("#655370" . "#fbf8ef")))
+ '(send-mail-function (quote mailclient-send-it))
  '(spacemacs-theme-comment-bg nil)
  '(spacemacs-theme-comment-italic t))
 (custom-set-faces
@@ -35,4 +45,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(aw-leading-char-face ((t (:inherit ace-jump-face-forground :height 2.0)))))

@@ -38,6 +38,14 @@
 
 (straight-use-package 'use-package)
 
+;; package.el
+;; so package-list-package will include them.
+(require 'package)
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/")
+	     '("orgmode" . "http://orgmode.org/elpa/"))
+
+
 
 ;; Load Config Files: (from ~/.emacs.d/config directory)
 ;;======================================================
@@ -55,3 +63,4 @@
       (concat (file-name-directory user-init-file) "custom-variables.el"))
 (when (file-exists-p custom-file)
   (load custom-file))
+(put 'dired-find-alternate-file 'disabled nil)

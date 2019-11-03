@@ -18,6 +18,8 @@
 (global-auto-revert-mode t)		; Reload changes from the desk.
 (column-number-mode t)			; Show column numbers.
 
+(setq mode-require-final-newline t)	; Add newline at the end of file.
+
 ;; Scrolling:
 ;;============
 (setq mouse-wheel-scroll-amount '(1)	; Scroll gentley
@@ -72,3 +74,16 @@
   :config
   (require 'smartparens-config)
   (smartparens-global-mode))
+
+
+;; Let Emacs knows about our PATH:
+;;=================================
+(use-package exec-path-from-shell)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
+
+;; General startup settings:
+;;===========================
+(setq inhibit-startup-message t)
+(setq initial-scratch-message "")
