@@ -41,3 +41,18 @@
     (define-key evil-normal-state-map (kbd "M-.") nil)
     (define-key evil-motion-state-map (kbd "<C-i>") 'evil-jump-forward)
     (define-key evil-insert-state-map (kbd "C-w") 'evil-window-map)))
+
+(use-package evil-surround
+  :after evil
+  :hook (evil-mode . global-evil-surround-mode))
+
+(use-package evil-numbers
+  :after evil
+  :bind (
+	 :map evil-normal-state-map
+	      ("+" . evil-numbers/inc-at-pt)
+	      ("-" . evil-numbers/dec-at-pt)))
+
+(use-package evil-commentary
+  :after evil
+  :hook (evil-mode . evil-commentary-mode))

@@ -36,6 +36,11 @@
      ("FIXME" . "#dc752f")
      ("XXX+" . "#dc752f")
      ("\\?\\?\\?+" . "#dc752f"))))
+ '(package-archives
+   (quote
+    (("melpa" . "https://melpa.org/packages/")
+     ("gnu" . "https://elpa.gnu.org/packages/")
+     ("org" . "https://orgmode.org/elpa/"))))
  '(pdf-view-midnight-colors (quote ("#655370" . "#fbf8ef")))
  '(send-mail-function (quote mailclient-send-it))
  '(spacemacs-theme-comment-bg nil)

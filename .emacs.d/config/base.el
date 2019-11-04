@@ -19,6 +19,10 @@
 (column-number-mode t)			; Show column numbers.
 
 (setq mode-require-final-newline t)	; Add newline at the end of file.
+(set-frame-parameter nil 'internal-border-width 0) ; Hide these annoying space margin on both sides.
+(set-frame-parameter nil 'top 0)
+(set-frame-parameter nil 'bottom 0)
+
 
 ;; Scrolling:
 ;;============

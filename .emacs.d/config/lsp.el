@@ -9,10 +9,16 @@
   (add-to-list 'eglot-ignored-server-capabilites :hoverProvider))
 
 (use-package lsp-mode
-  :defer t
-  :init (setq lsp-auto-guess-root t
-	      lsp-prefer-flymake nil
-	      lsp-eldoc-hook '(lsp-hover)))
+  :commands lsp
+  :diminish lsp-mode
+  :hook
+  ((elixir-mode . lsp)
+   ('lsp-after-initialize-hook
+    (lambda ()
+      (lsp--set-configuration '(:elixirLS, lsp-elixir--config-options)))))
+  :init
+  (add-to-list 'exec-path "/Users/alaadahmed/.emacs.d/straight/repos/elixir-ls/release"))
+
 
 (use-package lsp-ui
   :after lsp-mode
