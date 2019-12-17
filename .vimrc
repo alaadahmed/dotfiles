@@ -19,13 +19,6 @@ call plug#begin('~/.vim/plugged')                " You could write: `so ~/.vim/p
 
 " Utilities
 " ----------------------------
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
 Plug 'scrooloose/nerdtree'
 Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-vinegar'
@@ -45,6 +38,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'sbdchd/neoformat'
+Plug 'chriskempson/base16-vim'
+
 
 " Generic Programming Supports
 " ----------------------------
@@ -82,7 +77,6 @@ Plug 'tpope/vim-endwise'
 "" Elm Support
 " ----------------------------
 Plug 'elmcast/elm-vim'
-Plug 'pbogut/deoplete-elm'
 
 
 
@@ -122,6 +116,7 @@ call plug#end()  		                 "required.
 "==============================================================================
 " THEMES & UI
 "==============================================================================
+colorscheme base16-atelier-cave
 set number
 set ruler
 set tabstop=2
@@ -139,7 +134,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme one
+" colorscheme one
 set background=dark
 
 " set foldcolumn=1
@@ -274,7 +269,6 @@ let g:UltiSnipsJumpBackwordTrigger='<S-Tab>'
 "----------------------------
 " Deoplete
 "----------------------------
-let g:deoplete#enable_at_startup = 1
 
 
 "----------------------------

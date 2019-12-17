@@ -68,7 +68,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow vi-mode)
+plugins=(git git-flow vi-mode docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,21 +111,20 @@ alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Framew
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-export PATH=/usr/local/opt/findutils/libexec/gnubin:$PATH
-export PATH=~/.rbenv/shims:$PATH
-export PATH=~/.cargo/bin:$PATH
-export PATH=$PATH:/Users/alaadahmed/Developer/flutter/bin
+
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export PATH="/Users/alaadahmed/.rbenv/shims:$PATH"
+export PATH="$PATH:/Users/alaadahmed/.cargo/bin"
+export PATH="$PATH:/Users/alaadahmed/Developer/flutter/bin"
+export PATH="$PATH:/Users/alaadahmed/.composer/vendor/bin"
 
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk  # Root folder for Android SDK
 
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin      # avdmanager, sdkmanager
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools # adb, logcat
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator       # emulator
-
-# Path for BasicTex tools:
-export PATH=$PATH:/usr/local/texlive/2019basic/bin/x86_64-darwin
 
 
 # Manual Pages for some tools:

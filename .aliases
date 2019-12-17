@@ -30,7 +30,7 @@ alias egrep='egrep --color=auto'
 
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='brew update; brew upgrade; brew cleanup; npm update -g; gem update --system; gem update; gem cleanup'
+alias update='brew update; brew upgrade; brew cleanup; brew cask outdated; brew cask upgrade; npm update -g; gem update --system; gem update; gem cleanup'
 
 # alias for emacsclient command.
 alias ec='emacsclient -a "" -c &'
