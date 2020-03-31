@@ -13,12 +13,12 @@
  '(company-minimum-prefix-length 1)
  '(company-require-match nil)
  '(company-tooltip-align-annotation t t)
- '(custom-enabled-themes (quote (spacemacs-light)))
+ '(custom-enabled-themes (quote (doom-nord-light)))
  '(custom-safe-themes
    (quote
-    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
+    ("c8f959fb1ea32ddfc0f50db85fea2e7d86b72bb4d106803018be1c3566fd6c72" "7d56fb712ad356e2dacb43af7ec255c761a590e1182fe0537e1ec824b7897357" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
  '(diff-hl-flydiff-delay 0.5 t)
- '(flycheck-indication-mode (quote right-fringe))
+ '(fci-rule-color "#4C566A")
  '(hl-todo-keyword-faces
    (quote
     (("TODO" . "#dc752f")
@@ -36,15 +36,38 @@
      ("FIXME" . "#dc752f")
      ("XXX+" . "#dc752f")
      ("\\?\\?\\?+" . "#dc752f"))))
- '(package-archives
+ '(jdee-db-active-breakpoint-face-colors (cons "#191C25" "#80A0C2"))
+ '(jdee-db-requested-breakpoint-face-colors (cons "#191C25" "#A2BF8A"))
+ '(jdee-db-spec-breakpoint-face-colors (cons "#191C25" "#434C5E"))
+ '(objed-cursor-color "#C16069")
+ '(package-selected-packages
    (quote
-    (("melpa" . "https://melpa.org/packages/")
-     ("gnu" . "https://elpa.gnu.org/packages/")
-     ("org" . "https://orgmode.org/elpa/"))))
+    (epkg all-the-icons heaven-and-hell spacemacs-theme htmlize general helm magit which-key doom-themes use-package)))
  '(pdf-view-midnight-colors (quote ("#655370" . "#fbf8ef")))
- '(send-mail-function (quote mailclient-send-it))
  '(spacemacs-theme-comment-bg nil)
- '(spacemacs-theme-comment-italic t))
+ '(spacemacs-theme-comment-italic t)
+ '(vc-annotate-background "#2E3440")
+ '(vc-annotate-color-map
+   (list
+    (cons 20 "#A2BF8A")
+    (cons 40 "#bac389")
+    (cons 60 "#d3c788")
+    (cons 80 "#ECCC87")
+    (cons 100 "#e3b57e")
+    (cons 120 "#da9e75")
+    (cons 140 "#D2876D")
+    (cons 160 "#c88982")
+    (cons 180 "#be8b98")
+    (cons 200 "#B58DAE")
+    (cons 220 "#b97e97")
+    (cons 240 "#bd6f80")
+    (cons 260 "#C16069")
+    (cons 280 "#a15b66")
+    (cons 300 "#825663")
+    (cons 320 "#625160")
+    (cons 340 "#4C566A")
+    (cons 360 "#4C566A")))
+ '(vc-annotate-very-old-color nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

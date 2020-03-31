@@ -119,12 +119,14 @@ export PATH="/Users/alaadahmed/.rbenv/shims:$PATH"
 export PATH="$PATH:/Users/alaadahmed/.cargo/bin"
 export PATH="$PATH:/Users/alaadahmed/Developer/flutter/bin"
 export PATH="$PATH:/Users/alaadahmed/.composer/vendor/bin"
+export PATH="$PATH:/Users/alaadahmed/.pub-cache/bin"
 
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk  # Root folder for Android SDK
 
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin      # avdmanager, sdkmanager
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools # adb, logcat
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator       # emulator
+export PATH_TO_FX=/usr/local/lib/javafx-sdk-13.0.2/lib
 
 
 # Manual Pages for some tools:
@@ -164,3 +166,32 @@ zplug load
 . /usr/local/opt/asdf/asdf.sh
 
 export GPG_TTY=$(tty)
+
+#export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/alaadahmed/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/alaadahmed/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/alaadahmed/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/alaadahmed/google-cloud-sdk/completion.zsh.inc'; fi
+
+autoload bashcompinit
+bashcompinit
+
+source /Users/alaadahmed/.wp-completion.bash
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/alaadahmed/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/alaadahmed/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/alaadahmed/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/alaadahmed/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

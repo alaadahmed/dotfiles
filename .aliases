@@ -30,10 +30,12 @@ alias egrep='egrep --color=auto'
 
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='brew update; brew upgrade; brew cleanup; brew cask outdated; brew cask upgrade; npm update -g; gem update --system; gem update; gem cleanup'
+alias update='brew update; brew upgrade; brew cleanup; brew cleanup -s; brew cask outdated; brew cask upgrade; npm update -g; gem update --system; gem update; gem cleanup'
+
 
 # alias for emacsclient command.
 alias ec='emacsclient -a "" -c &'
 
 alias glx='gigalixir'
 alias path='ruby -e "%x[echo $PATH].split(\":\").each{|l| puts l.split(\" \")[0]}"'
+alias getbase='wget https://raw.githubusercontent.com/mkdo/mkdo-base/master/setup.sh'

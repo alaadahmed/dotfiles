@@ -116,7 +116,8 @@ call plug#end()  		                 "required.
 "==============================================================================
 " THEMES & UI
 "==============================================================================
-colorscheme base16-atelier-cave
+"base16-atelier-cave
+colorscheme base16-google-dark
 set number
 set ruler
 set tabstop=2
@@ -135,11 +136,12 @@ if (has("termguicolors"))
 endif
 
 " colorscheme one
-set background=dark
+" set background=dark
+hi normal guibg=bg
+hi signcolumn guibg=bg
 
 " set foldcolumn=1
 " hi foldcolumn ctermbg=bg
-
 
 
 "==============================================================================

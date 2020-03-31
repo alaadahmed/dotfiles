@@ -378,17 +378,28 @@
    possible options of a multitude of functions even built it ones
 
    #+NAME: helm
+   #+BEGIN_SRC emacs-lisp :tangle no
+     (use-package helm
+       :init
+       (setq helm-follow-mode-persistent t
+	     helm-autoresize-max-height 40
+	     helm-display-header-line nil)
+       :config
+       (require 'helm-config)
+       (helm-autoresize-mode t)
+       (add-hook 'helm-minibuffer-set-up-hook 'helm-hide-minibuffer-maybe)
+       (helm-mode t))
+   #+END_SRC
+
+** exec-path-from-shell
+   
+   Let Emacs knows about our Path:
+
+   #+NAME: exec-path-from-shell
    #+BEGIN_SRC emacs-lisp
-  ;;   (use-package helm
-  ;;     :init
-  ;;     (setq helm-follow-mode-persistent t
-	;;     helm-autoresize-max-height 40
-	;;     helm-display-header-line nil)
-  ;;     :config
-  ;;     (require 'helm-config)
-  ;;     (helm-autoresize-mode t)
-  ;;     (add-hook 'helm-minibuffer-set-up-hook 'helm-hide-minibuffer-maybe)
-  ;;     (helm-mode t))
+     (use-package exec-path-from-shell)
+     (when (memq window-system '(mac ns x))
+       (exec-path-from-shell-initialize))
    #+END_SRC
 
 ** diminish
@@ -397,6 +408,7 @@
    #+BEGIN_SRC emacs-lisp
      (use-package diminish)
    #+END_SRC
+
 ** projectile
 
    Projectile is made manage projects. So you search and run projects
@@ -486,6 +498,13 @@
 	      (comint-mode . company-mode)))
    #+END_SRC
 
+** elm-mode
+   
+   #+NAME: elm-mode
+   #+BEGIN_SRC emacs-lisp
+     (use-package elm-mode)
+   #+END_SRC
+
 ** lsp-mode
 
    #+NAME: lsp-mode
@@ -525,8 +544,7 @@
      (use-package company-lsp
        :after '(company lsp-mode)
        (setq company-lsp-cache-candidates t
-	     company-lsp-async t
-	     company-lsp-enable-snippet t)
+	     company-lsp-async t)
        (push 'company-lsp company-backends))
 
      ;; Makes nice icons for functions
@@ -555,17 +573,6 @@
 	:config
 	(require 'smartparens-config)
 	(smartparens-global-mode))
-   #+END_SRC
-
-** exec-path-from-shell
-   
-   Let Emacs knows about our Path:
-
-   #+NAME: exec-path-from-shell
-   #+BEGIN_SRC emacs-lisp
-     (use-package exec-path-from-shell)
-     (when (memq window-system '(mac ns x))
-       (exec-path-from-shell-initialize))
    #+END_SRC
 
 ** ace-window
@@ -601,6 +608,7 @@
    #+BEGIN_SRC emacs-lisp
 
    #+END_SRC
+
 ** evil-mode
 
    Let's make our Emacs even more EVIL
@@ -685,3 +693,4 @@
        "C-c <f6>" 'heaven-and-hell-load-default-theme
        "<f6>" 'heaven-and-hell-toggle-theme))
   #+END_SRC
+
